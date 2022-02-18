@@ -7,10 +7,7 @@ import Vote from "./pages/Vote";
 function App() {
   return (
     <div className="App">
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="vote" element={<Vote />} />
-      </Routes>
+      <h1>Welcome to React Router!</h1>
     </div>
   );
 }
