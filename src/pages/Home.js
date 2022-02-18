@@ -21,7 +21,7 @@ const Home = () => {
               <p className="card-text">
                 Vota para conocer al nuevo miembro de nuestra familia!
               </p>
-              <Link className="btn btn-primary" to="vote">
+              <Link className="btn btn-primary" to="/genderrev/vote">
                 Votar
               </Link>
             </div>

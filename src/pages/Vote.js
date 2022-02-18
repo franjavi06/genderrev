@@ -18,7 +18,7 @@ const Vote = () => {
     console.log(nombre, voto);
 
     if (voto && nombre) {
-      navigate("/");
+      navigate("/genderrev");
     } else {
       alert("Nombre y Voto Requeridos");
     }
