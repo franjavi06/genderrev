@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import imagen from "../images/fiestas.jpg";
+import { useDispatch, useSelector } from "react-redux";
+import { addVoto } from "../redux/apicalls/voto";
 import { useNavigate } from "react-router-dom";
 
 const Vote = () => {
   let navigate = useNavigate();
+  const dispatch = useDispatch();
   const [nombre, setNombre] = useState("");
   const [voto, setVoto] = useState(0);
 
@@ -18,6 +21,7 @@ const Vote = () => {
     console.log(nombre, voto);
 
     if (voto && nombre) {
+      addVoto({ nombre, voto }, dispatch);
       navigate("/genderrev");
     } else {
       alert("Nombre y Voto Requeridos");
@@ -66,8 +70,8 @@ const Vote = () => {
                     onChange={handleVoto}
                   >
                     <option value="0">Selecciona Género</option>
-                    <option value="1">Boy</option>
-                    <option value="2">Girl</option>
+                    <option value="B">Boy</option>
+                    <option value="G">Girl</option>
                   </select>
                 </div>
               </div>
